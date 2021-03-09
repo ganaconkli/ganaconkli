@@ -48,6 +48,24 @@
 	//bootbox.alert("Mejore Faucets<img src=\'images/banner.png\' style=\'width=10\'><br><a style=\'font-size:5px; text-decoration: none; color:black;\'>");
 	//bootbox.alert("No te arrepentiras gana cryptomonedas de manera automatica en las faucets marcardas de color rosa mas facil no puede ser,tambien Te recomiendo las faucets 'Cryptowin', 'Coinisclub' y las 4 faucets marcadas en color naranja para mas detalles observa la pagina.");
 	//swal('"Te recomindo estas tres(3) Faucets"<br>"1.Criptowin Gana Bitcoin cada 15 mintos con un minimo de retiro de 500 satoshi"');
+	$("#faucet").click(function(){
+
+			document.getElementById("caja_faucet").style.display="block"
+			document.getElementById("caja_ptc").style.display="none"
+			document.getElementById("caja_btc").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_preguntas").style.display="none"
+
+		})
+		$("#ptc").click(function(){
+
+			document.getElementById("caja_ptc").style.display="block"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("caja_btc").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_preguntas").style.display="none"
+
+		})
 </script>
 <div class="container" style='background:transparent; margin-top:1%;'>
 		<div class="navbar navbar-default" role="navigation">
@@ -56,6 +74,19 @@
 					<img src="images/banner.png"  style="width:100%;">   
 				</div>
 	  		</div>
+			<div class="row">
+  			<div class="col-md-12">
+	    		<form class="navbar-form navbar-right" role="form" method="post" action="?vista=intranet" autocomplete="off">
+	            	<div class="form-group">
+					    	<button  type="button" class="btn btn-primary" value="faucet"  name="faucet" id="faucet"  ><span >FAUCET</span></button>
+					    	<button  type="button" class="btn btn-dark" value="ptc" name="ptc"  id="ptc" href="#"><span >PTC</span></button>
+					    	<!--<button  type="button" class="btn" value="btc" name="btc" id="btc"  href="#"><span >BTC</span></button>
+					    	<button  type="button" class="btn" style="background:  #52be80" value="billetera" name="billetera" id="billetera"  href="#"><span >BILLETERAS</span></button>
+					    	<button  type="button" class="btn" style="background:  #FF5733" value="preguntas" name="preguntas" id="preguntas"  href="#"><span>PREGUNTAS</span></button>-->
+					  </div>
+				</form>
+			</div>
+		</div>
 	  		
 			<div class="panel-body" id="caja_faucet">
 				<div class="row">
