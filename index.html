@@ -68,6 +68,7 @@
 						</div>	-->			    	
 							<button  type="button" class="btn btn-primary" value="faucet"  name="faucet" id="faucet"  ><span >Mejores FAUCETS</span></button>
 							<button  type="button" class="btn btn-dark" value="fram" name="farm"  id="farm" href="#"><span >Farming</span></button>
+							<button  type="button" class="btn btn-dark" value="auto" name="auto"  id="auto" href="#"><span >Auto Faucet</span></button>
 					    	<button  type="button" class="btn btn-dark" value="ptc" name="ptc"  id="ptc" href="#"><span >Faucets 5 min</span></button>
 					    	<button  type="button" class="btn btn-dark" value="faucet_60" name="faucet_60"  id="faucet_60" href="#"><span >Faucets 60 min</span></button>
 					    	<button  type="button" class="btn" value="mineria" name="mineria" id="mineria"  href="#"><span >Mineria en la Nube</span></button>
@@ -2086,7 +2087,7 @@ SEPTIMA FILA
 				</div>
 				<div class="panel-heading" style="background: #9f6c05 ">
 					<h4 style="color: black">RETIROS INSTANTANEOS</h4>
-					<a target="_blank" href="https://wakedoge.io/index.php?refer=71350" class="btn btn-primary">Registrate</a>
+					<a target="_blank" href="https://wakedoge.io/r/15211" class="btn btn-primary">Registrate</a>
 				</div>
 			</div>
 		</div>
@@ -2138,6 +2139,36 @@ SEPTIMA FILA
 	</div>
 
 
+	<div class="panel-body" style="background:transparent; display: none;" id="caja_auto">
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black">
+						<span style="color: white">Auto Faucet TRX<span>
+					</div>
+					<div class="panel-heading">
+						<h4 style="color: black">Gana TRX automaticamente cada 10 min a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+						<a target="_blank" href="https://forthtrade.com/tronminer?r=TFH8v6GijmgNTodEu8Am3vYVqtkGMn2ZEc" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black">
+						<span style="color: white">Auto Faucet CryptoMonedas<span>
+					</div>
+					<div class="panel-heading">
+						<h4 style="color: black">Gana CRYPTOMONEDAS automaticamente a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+						<a target="_blank" href="
+							https://autofaucet.dutchycorp.space/?r=yoursetneo" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 	</div>
 	<script type="text/javascript">
 	$("#faucet").click(function(){
@@ -2149,6 +2180,7 @@ SEPTIMA FILA
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
 			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
 
 
 		})
@@ -2161,6 +2193,7 @@ SEPTIMA FILA
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
 			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
 
 		})
 		$("#mineria").click(function(){
@@ -2172,6 +2205,7 @@ SEPTIMA FILA
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
 			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
 
 		})
 		$("#billetera").click(function(){
@@ -2184,6 +2218,7 @@ SEPTIMA FILA
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
 			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
 
 		})
 		$("#inv").click(function(){
@@ -2195,6 +2230,7 @@ SEPTIMA FILA
 			document.getElementById("faucet_5").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
 			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
 			
 
 		})
@@ -2209,6 +2245,7 @@ SEPTIMA FILA
 			document.getElementById("caja_faucet").style.display="none"
 			document.getElementById("faucet_5").style.display="none"
 			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
 			
 
 		})
@@ -2223,10 +2260,26 @@ SEPTIMA FILA
 			document.getElementById("caja_faucet").style.display="none"
 			document.getElementById("faucet_5").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
-			
+			document.getElementById("caja_auto").style.display="none"
 
 		})
 	
+		$("#auto").click(function(){
+
+
+			document.getElementById("caja_auto").style.display="block"
+
+
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			
+
+		})
 	
 </script>
 </body>
