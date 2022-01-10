@@ -67,6 +67,7 @@
 						</div>	
 						</div>	-->			    	
 							<button  type="button" class="btn btn-primary" value="faucet"  name="faucet" id="faucet"  ><span >Mejores FAUCETS</span></button>
+							<button  type="button" class="btn btn-dark" value="fram" name="farm"  id="farm" href="#"><span >Farming</span></button>
 					    	<button  type="button" class="btn btn-dark" value="ptc" name="ptc"  id="ptc" href="#"><span >Faucets 5 min</span></button>
 					    	<button  type="button" class="btn btn-dark" value="faucet_60" name="faucet_60"  id="faucet_60" href="#"><span >Faucets 60 min</span></button>
 					    	<button  type="button" class="btn" value="mineria" name="mineria" id="mineria"  href="#"><span >Mineria en la Nube</span></button>
@@ -1466,6 +1467,42 @@ SEPTIMA FILA
 			-->
 		
 	</div>
+	<div class="panel-body" style="background:transparent; display: none" id="caja_farming">
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading" style="background:#0b0794">
+						<span style="color: white">Chickens Farm</span>
+					</div>
+					<div class="panel-heading" style="background:white">
+						<h4 style="color: black">COMO FUNCIONA? </h4>
+						<h4 style="color: ">1.Primero debes crear una cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a>, si ya tienes una cuenta puedes Omitir este paso</h4>
+						<h4 style="color: ">2.Recibiras 10.000 Plata Gratis</h4>
+						<h4 style="color: ">3.Compra dos Gallos de 5.000 Plata</h4>
+						<h4 style="color: ">4. Listo comenzaras a recibir huevos de tus Gallos, Huevos que podras intencambiar por Plata y luego Retirar a tu cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a> ó Comprar mas Gallos Para aumentar tus Ingresos</h4>
+						<a target="_blank" href="https://chickens-farm.org/?i=68" class="btn btn-primary">Registrate Aquí</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading" style="background:#0b0794">
+						<span style="color: white">Sueldito</span>
+					</div>
+					<div class="panel-heading" style="background:white">
+						<h4 style="color: black">COMO FUNCIONA? </h4>
+						<h4 style="color: ">1.Primero debes crear una cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a> ó <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a>, si ya tienes una cuenta puedes Omitir este paso</h4>
+						<h4 style="color: ">2.Reclamaras una Prpiedad Gratis</h4>
+						<h4 style="color: ">3.Esta Propiedad te Generara coins cada 24 hrs, No olvides reclamar tu Bonus diario de 10 coins</h4>
+						<h4 style="color: ">4. Listo el minimo de retiro es de 200 coins,  Luego podras cajear tus coins por Dolares y  Retirar a tu cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a> ó <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> Tambien puedes Comprar mas Propiedades Para aumentar tus Ingresos</h4>
+						<a target="_blank" href="https://sueldito.com?aff=30984" class="btn btn-primary">Registrate Aquí</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 	<div class="panel-body" style="background:transparent; display: none" id="faucet_5">
 	<div class="row">
 		<div class="col-md-3">
@@ -2111,6 +2148,7 @@ SEPTIMA FILA
 			document.getElementById("caja_billeteras").style.display="none"
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
 
 
 		})
@@ -2122,6 +2160,7 @@ SEPTIMA FILA
 			document.getElementById("caja_billeteras").style.display="none"
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
 
 		})
 		$("#mineria").click(function(){
@@ -2132,6 +2171,7 @@ SEPTIMA FILA
 			document.getElementById("caja_billeteras").style.display="none"
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
 
 		})
 		$("#billetera").click(function(){
@@ -2143,6 +2183,7 @@ SEPTIMA FILA
 			document.getElementById("faucet_5").style.display="none"
 			document.getElementById("caja_inv").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
 
 		})
 		$("#inv").click(function(){
@@ -2153,6 +2194,7 @@ SEPTIMA FILA
 			document.getElementById("caja_faucet").style.display="none"
 			document.getElementById("faucet_5").style.display="none"
 			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
 			
 
 		})
@@ -2166,6 +2208,21 @@ SEPTIMA FILA
 			document.getElementById("caja_mineria").style.display="none"
 			document.getElementById("caja_faucet").style.display="none"
 			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			
+
+		})
+
+		$("#farm").click(function(){
+
+			document.getElementById("caja_farming").style.display="block"
+
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
 			
 
 		})
