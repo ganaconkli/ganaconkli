@@ -1,7 +1,2398 @@
-[Window Title]
-Update Available
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GanaConKli</title>
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>UPEL UNIVERSIDAD PEDAGOCIA EXPERIMENTAL LIBERTADOR</title>
+		<link type="text/css" href="libreria/jquery/css/jquery-ui-1.10.4.custom.min.css"  rel="stylesheet" />
+		<link type="text/css" href="libreria/bootstrap-3.1.1/css/bootstrap.min.css"  rel="stylesheet" />
+		<link type="text/css" href="libreria/bootstrap-3.1.1/css/bootstrap-theme.min.css"  rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="libreria/jquery/css/autocomplete.css" />
+		<link rel="stylesheet" type="text/css" href="libreria/data_tables_1.10/css/jquery.dataTables.min.css" />
+		<script type="text/javascript" src="libreria/jquery/js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="libreria/jquery/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="libreria/bootstrap-3.1.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libreria/bootstrap-3.1.1/js/bootbox.min.js"></script>
 
-[Main Instruction]
-A new version of Sublime Text is available, download now?
+		<script type="text/javascript" src="libreria/validacion/lemez_validacion1.2.3.js.php"></script>
+		<script type="text/javascript" src="libreria/jquery/js/jquery.autocomplete.min.js"></script>
 
-[Download] [Cancelar]
+		<script type="text/javascript" src="libreria/data_tables_1.10/js/jquery.dataTables.min.js"></script>
+		<!-- TABLE EXPORT -->
+		<script type="text/javascript" src="libreria/htmltable_export/tableExport.js"></script>
+		<script type="text/javascript" src="libreria/htmltable_export/jquery.base64.js"></script>
+		<script type="text/javascript" src="libreria/htmltable_export/html2canvas.js"></script>
+		<script type="text/javascript" src="libreria/htmltable_export/jspdf/libs/sprintf.js"></script>
+		<script type="text/javascript" src="libreria/htmltable_export/jspdf/jspdf.js"></script>
+		<script type="text/javascript" src="libreria/htmltable_export/jspdf/libs/base64.js"></script>
+		<script type="text/javascript" src="libreria/jquery/js/jquery.tablednd.js"></script>
+		<script src="libreria/MotionCAPTCHA-master/jquery.motionCaptcha.0.2.js"></script>
+		<link href="libreria/MotionCAPTCHA-master/jquery.motionCaptcha.0.2.css"></script>
+		<link href="css/index.css" rel="stylesheet">
+
+	<!--ARCHIVOS PARA VALIDACIONES KLIBERT-->
+		<script src="js/dist/sweetalert-dev.js"></script>
+		<script src="js/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="js/dist/sweetalert.css">
+		<script src="js/ajax.js"></script>
+
+	<!--....................................................-->
+</head>
+
+
+
+<body style="background: url(images/cryptomonedas.jpg)">
+<script type="text/javascript">
+	
+	//bootbox.alert("Nota Para la Pagina CryptoWin: Los retiros de FaucetPay están temporalmente desactivados debido a un hackeo en sus billeteras activas. Lo habilitaremos de nuevo tan pronto como se aclaren las cosas.Utilice Retiro directo, solo asegúrese de alcanzar el umbral mínimo de 15.000 satoshi.");
+	//bootbox.alert("No te arrepentiras gana cryptomonedas de manera automatica en las faucets marcardas de color rosa mas facil no puede ser,tambien Te recomiendo las faucets 'Cryptowin', 'Coinisclub' y las 4 faucets marcadas en color naranja para mas detalles observa la pagina.");
+	//swal('"Te recomindo estas tres(3) Faucets"<br>"1.Criptowin Gana Bitcoin cada 15 mintos con un minimo de retiro de 500 satoshi"');
+	
+</script>
+<div class="container" style='background:transparent; margin-top:1%;'>
+		<div class="navbar navbar-default" role="navigation" style="background: black">
+			<!--<div class="row">
+				<div class="col-md-12">
+					<img src="images/banner.png"  style="width:100%;">   
+				</div>
+	  		</div>-->	
+			<div class="row">
+  				<div class="col-md-12">
+	    			<form class="navbar-form navbar-center" role="form" method="post" action="?vista=intranet" autocomplete="off">
+						<!--<div class="panel-success">
+							<div class=" panel-heading">
+						<h3><span >Aprende a ganar dinero en mi Curso GanConKli CrytoMonedas</span></h3> <a  target="_blank" href="https://www.youtube.com/watch?v=OQufzNki0DQ&t=8s"> ir al Curso</a>
+						</div>	
+						</div>	-->			    	
+							<button  type="button" class="btn btn-primary" value="faucet"  name="faucet" id="faucet"  ><span >Mejores FAUCETS</span></button>
+							<button  type="button" class="btn btn-dark" value="fram" name="farm"  id="farm" href="#"><span >Farming</span></button>
+							<button  type="button" class="btn btn-dark" value="auto" name="auto"  id="auto" href="#"><span >Auto Faucet</span></button>
+					    	<button  type="button" class="btn btn-dark" value="ptc" name="ptc"  id="ptc" href="#"><span >Faucets 5 min</span></button>
+					    	<button  type="button" class="btn btn-dark" value="faucet_60" name="faucet_60"  id="faucet_60" href="#"><span >Faucets 60 min</span></button>
+					    	<button  type="button" class="btn" value="mineria" name="mineria" id="mineria"  href="#"><span >Mineria en la Nube</span></button>
+					    	<button  type="button" class="btn" style="background:  #52be80" value="billetera" name="billetera" id="billetera"  href="#"><span >BILLETERAS</span></button>
+					    	<button  type="button" class="btn" style="background:  #FF5733" value="inv" name="inv" id="inv"  href="#"><span>INVERSIONES</span></button>
+					 
+				</form>
+				</div>
+			</div>
+			<!--<div id="ctab_ad"></div>
+<script type="text/javascript">
+var iframe = document.createElement('iframe');
+iframe.src = 'https://get.cryptobrowser.site/pb/1/21741911/1076/?t=simple,text,pro,mobile';
+iframe.frameBorder = 'no';
+iframe.style.width = '600%';
+iframe.style.height = '200%';
+document.getElementById('ctab_ad').appendChild(iframe);
+<div class="row">
+		<div class="col-md-12" >
+			<div class="panel-success">
+				<div class=" panel-heading" style="background: #5dade2"><center><h4 style="color: black">Prueba estas 4 Principales y Nuevas Faucets de 5 minutos, tareas, juego y mucho mas..</h4></center> </div>
+			</div>
+		</div>
+	</div><br>
+
+<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">Nueva Faucet stockenz</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Gana 3 satoshi cada 15 minutos, 50% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://stockenz.com/kx4rotmx" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+-->
+</script>
+			  		
+<div class="panel-body" style="background:transparent" id="caja_faucet">
+<!--PRIMERA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #0b0794 ">
+					<span style="color: white">Nueva Faucet </span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Gana 1 a 4 Satoshi cada 60 minutos, 20% comision por referidos retiro instantaneo pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="http://vatoscash.com/ref/yoursetneo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:#0b0794">
+					<span style="color: white">BTCADSPACE</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">gana 1 a 4 satoshi cada 15 minutos,50% comision por referidos, OJO LA MODALIDAD DE LA FAUCET TIENDE A CAMBIAR pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://btcadspace.com/ref/jose1975neo1" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success" >
+				<div class="panel-heading" style="background: #f7dc6f">
+					<span style="color: white">Bitcoinpayu<span>
+				</div>
+				<div class="panel-heading" style="background: #f7dc6f">
+					<h4 style="color: black">Gana 2 satoshi cada 7 minutos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<h4 style="color: black">Los pagos son instantaneo </h4>
+					<a target="_blank" href="https://bitcoinpayu.com/?r=1145" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #f1c40f ">
+					<span style="color: black">Faucet freeBinance</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">Cada 10 minutos Gana 115 satoshi BNB, Sube de Nivel y Gana mas pago Instantaneo a 
+					<a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://freebinance.co.in/?ref=913" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+<!--SEGUNDA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					FAUCETBTC
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black">*-Faucet: Gana 2 satoshis Cada 15 minutos, pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 15% comision por referidos </h4>
+					<h4 style="color: black">*-Wheel of Fortune: Gana hasta $0.005 cada 30 min</h4>
+					<a target="_blank" href="https://www.faucetbtc.net/?r=9835" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success" >
+				<div class="panel-heading" style="background:  #1c2833 ">
+					<span style="color: white">TRITONBUX</span>
+				</div>
+				<div class="panel-heading" style="background:  #1c2833 ">
+					<h4 style="color: white">Gane $0.002 cada 30 minutos, Sube de Nivel y gana mas pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por referidos + PTC</h4>
+					<a target="_blank" href="https://tritonbux.io/?r=32068" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<span style="color: black">Btc-xFaucets.net</span>  
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black">Gana hasta 40 satoshi, Cada 10 minutos + 25% comision por referidos 
+						PAGO INSTANTANEO A <a target="_blank"  href="https://www.icoinpay.com/">Coinpay</a>
+					</h4>
+					<a target="_blank" href="  https://www.xfaucets.com/?ref=b7853228  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Faucet coinpot
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Faucet 1 satoshi cada 5 minutos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 25% comision por Referidos</h4>
+			   	 	<a href="https://coinpot.in/?r=36829" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+	</div>
+<!--TERCERA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 	<span style="color: black">LitKing </span>
+			   	</div>
+			   	<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 	<h4 style="color: black">Gana de 0.00000650 hasta 0.06600000 en LTC cada Hora 25% comision por referidos</h4>
+			   	 	<a href="https://www.litking.biz/signup?r=56308" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">Faucet Coinpayz</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Gana 1 satishi cada 5 minutos , 30% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://coinpayz.xyz/?r=184024" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" >
+					<span style="color:black">FAUCET Roll Shibainu</span>
+				</div>
+				<div class="panel-heading" >
+					<h4 style="color: black">Gana hasta 300$ en Shibainu cada hora + 50% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://freeshibainu.com/?ref=3913" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #000305 ">
+					<span style="color: white">Adbtc</span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black"> Gana hasta mas de 100 satoshis diarios, minimo de retiro 1000 satoshi, 20% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://r.adbtc.top/1992755" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--CUARTA FILA-->
+	<div class="row" >
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 <span style="color: black">	Free-Litecoin </span>
+			   	</div>
+			   	<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 	<h4 style="color: black">Gana hasta 200$ en Litecoin cada Hora + 50% comision por Referidos</h4>
+			   	 	<a href="https://free-litecoin.com/login?referer=1137883" class="btn btn-primary"  target="_blank">  Litecoin</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #9f6c05 ">
+					<span style="color:black">FAUCET Roll DogeCoin</span>
+				</div>
+				<div class="panel-heading" style="background: #9f6c05 ">
+					<h4 style="color: black">Gana hasta 200$ en Doge cada hora + 50% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://free-doge.io/?referer=10607" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<span style="color: black">Litecoin Faucet	</span>
+				</div>
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<h4 style="color: black">Gane 0.00000627 Litecoin cada 60 minutos, pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 25% comision por referidos</h4>
+					<a target="_blank" href="https://litecoin-faucet.com/?r=MTLPpYfqFsEb9L4YmTxzP4WiccNHiAPwaX" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #b9770e">
+					<span style="color: black">Dogecoin Faucet	</span>
+				</div>
+				<div class="panel-heading" style="background: #b9770e">
+					<h4 style="color: black">Gane 0.004 Doge cada 60 minutos, pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 25% comision por referidos</h4>
+					<a target="_blank" href="https://doge-faucet.com/?r=DC63tuWGri58w6Bm65cTEARo6UXSTWWQMh" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--QUINTA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #1e8449">
+					<span style="color: black">Faucet Bitcoin Cash</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					
+					<h4>Cada 10 minutos Gana hasta 10000 satoshi BHC , pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://faucetbitcoin.cash?r=14567" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #6c3483 ">
+		   			<span style="color: white">Get-bitco.in</span>
+				</div>
+				<div class="panel-heading" style="background: white">
+		   	 		<h4>Ojo: Esta pagina paga una gran cantidad de satoshi, pero! sirve solo para promocionarte y conseguir referidos, NO PAGA ! Gana hasta 50 satoshi cada 15 minutos + 50% comision por referidos</h4>
+		   	 		<a href="https://get-bitco.in/?r=37zlutov9e" class="btn btn-primary" target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #5dade2 ">
+					<span style="color: white">Coinpayu</span>
+				</div>
+				<div class="panel-heading" style="background:  #5dade2 ">
+					<h4 style="color: white"> Gana hasta mas de 100 satoshis diarios, minimo de retiro 1500 satoshi, 20% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://www.coinpayu.com/?r=jose1975neo1" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	FaucetCrypto
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Fauet 25 minutos + Ads 20% comision por referidos</h4>
+			   	 	<a href="https://faucetcrypto.com/ref/666639" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<!-- <div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #d35400 ">
+					<span style="color: white">CryptBug</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 class="card-text" style="color: black">Gana hasta 10 satoshi cada 60 minutos 50% comision por referidos + Tikes de loterias por ver Ads</h4>
+					<a class="btn btn-primary" href="https://cryptbug.net/ref/yoursetneo"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:#0b0794">
+					<span style="color: white">FaucetClub</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">gana 0.0015 USD cada 10 minutos, pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://faucetclub.org/?r=2052" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>-->
+		
+	</div>
+<!--SEXTA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">AdBitcoin</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">gana de 1 a 10 satoshi y un tiket de loteria Cada 10 minutos, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 15% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://adbitcoin.co/ref/yoursetneo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">Faucet OurBitcoin</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Cada 5, 15, 30 y 60 minutos Gana Satoshi , 50% comision por referidos </h4>
+					<a target="_blank" href="https://ourbitco.in/?r=c348gwap6q" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Faucet free bitcoin
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Faucet 15 a 25 satoshi cada 60 minutos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+			   	 	<a href="http://bonus-express.com/?i=2447" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<span style="color: black">Faucet Coinfree</span>  
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black">Gana $0.0012 Cada 10 minutos 
+						PAGO A <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a>
+					</h4>
+					<a target="_blank" href=" https://coinfree.info/?r=229  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--SEPTIMA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Faucet Club
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4>Gana hasta 700 Solana cada 6 minutos, pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> + 50% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://faucetpay.club?r=6QgyxXqSkSfpE1edwGYAfUQZvgGVYmaetzhQzrT9fPXA" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #b9770e">
+					<span style="color: black">Faucet USD</span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black">Puedes ganar de $0.001 a $5 cada 15 minutos, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> + 10% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://ad-doge.com/register.aspx?u=113395" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success" >
+				<div class="panel-heading" style="background: #f7dc6f">
+					<span style="color: white">Bitdaily<span>
+				</div>
+				<div class="panel-heading" style="background: #f7dc6f">
+					<h4 style="color: black">Gana 2 satoshi por cada shortlinks, pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<h4 style="color: black">Auto Faucet, invita a tus amigos y gana el 50% de comision</h4>
+					<a target="_blank" href="https://bitdaily.xyz/?r=11567" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #000305 ">
+					<span style="color: white">Btcbux</span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black"> Gana hasta mas de 100 satoshis diarios viendo Ads + Faucet Roll</h4>
+					<a target="_blank" href="https://btcbux.io/r/kwBDjj" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+<!--OPTAVA FILA-->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Faucet Ltcpayu
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Faucet Ltc cada 5 minutos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 30% comision por Referidos</h4>
+			   	 	<a href="https://ltcpayu.com/refer/user/785" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Cryptowin
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4>Gana hasta 5 satoshi cada 15 minutos y 1 tiket viendo ads, pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> + 50% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://cryptowin.io/ref/jose1975neo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					PTCSpin
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Clain 5 satoshi cada 30 min y 20 satoshi en Bitcoin cash, 10 Gwai, 60 litoshi cada 5 min pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a class="btn btn-primary" href="https://www.ptcspin.com/?ref=2106"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #1c2833 ">
+					<span style="color: white">SimpleBits</span>
+				</div>
+				<div class="panel-heading" style="background:  #1c2833 ">
+					<h4 style="color: white">Gana de 5 a 15 tokens cada 30 minutos + 20% comision por Referidos bajo minimo de retiro pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a href="https://simplebits.io/ref/EcStA9p-usTW" class="btn btn-primary"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<!--
+		<div class="col-md-2">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Cryptslice
+				</div>
+				<div class="panel-heading">
+					<h4>No hay minimo de retiro, Reclama Cada 15 minutos, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 25% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://cryptslice.com/?r=4602" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #27ae60">
+					<span style="color: black">FAUCET USDT </span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4>Cada 10 min, GANA DE 0.001 a 0.003 USDT , 10% COMISION REFERIDOS, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="http://usdtfaucet.xyz/?r=515" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Bitcoinspin
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hastas 30 satoshi cada 15 minutos + 50% comision por referidos</h4>
+			   	 	<a href="https://bitcoinsp.in/?r=03jr6e4caz" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>-->
+	</div>
+
+	
+	
+
+	<div class="row">
+		<div class="col-md-12" >
+			<div class="panel-success">
+				<div class=" panel-heading" style="background: #5dade2"><center><h4 style="color: black">Ads and PTC</h4></center> </div>
+			</div>
+		</div>
+	</div><br>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #000305 ">
+					<span style="color: white">Adbtc</span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black"> Gana hasta mas de 100 satoshis diarios, minimo de retiro 1000 satoshi, 20% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://r.adbtc.top/1992755" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #5dade2 ">
+					<span style="color: white">Coinpayu</span>
+				</div>
+				<div class="panel-heading" style="background:  #5dade2 ">
+					<h4 style="color: white"> Gana hasta mas de 100 satoshis diarios, minimo de retiro 1500 satoshi, 20% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://www.coinpayu.com/?r=jose1975neo1" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					CryptoTap	
+				</div>
+				<div class="panel-heading">
+					<h4>Instala este Navegador y gana bitcoin por navegar, mineria mientras navegas..</h4>
+					<a target="_blank" href="https://cryptotabbrowser.com/21741911" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #000305 ">
+					<span style="color: white">Btcbux</span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black"> Gana hasta mas de 100 satoshis diarios viendo Ads + Faucet Roll</h4>
+					<a target="_blank" href="https://btcbux.io/r/kwBDjj" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	
+		
+		
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #f1c40f">
+					<span style="color: white">Ads Btc</span>  
+				</div>
+				<div class="panel-heading" style="background: #f1c40f">
+					<h4 style="color: black">Gana Btc viendo Ads</h4>
+					<a target="_blank" href="https://surfingbtc.cc?r=yoursetneo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<span style="color: white">Ads Ltc</span> 
+				</div>
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<h4 style="color: black">Gana Ltc viendo Ads</h4>
+					<a target="_blank" href=" https://adltc.cc?r=yoursetneo " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #5dade2">
+					<span style="color: white">Ads Dash</span>
+				</div>
+				<div class="panel-heading" style="background: #5dade2">
+					<h4 style="color: black">Gana Dash viendo Ads</h4>
+					<a target="_blank" href="https://addash.cc?r=yoursetneo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #ffb833 ">
+					<span style="color: white">Ads Doge </span>
+				</div>
+				<div class="panel-heading" style="background:  #ffb833 ">
+					<h4 style="color: black">Gana Doge viendo Ads</h4>
+					<a target="_blank" href=" https://addoge.cc?r=yoursetneo " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #f9041c ">
+					<span style="color: white">Ads Trx</span>  
+				</div>
+				<div class="panel-heading" style="background:  #f9041c ">
+					<h4 style="color: black">Gana Trx viendo Ads</h4>
+					<a target="_blank" href=" https://surf-trx.com?r=yoursetneo " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #0e0a8d ">
+					<span style="color: white">Ads Dgb </span>
+				</div>
+				<div class="panel-heading" style="background:   #0e0a8d  ">
+					<h4 style="color: black">Gana Dgb viendo Ads</h4>
+					<a target="_blank" href=" https://adsdgb.com?r=yoursetneo  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  black ">
+					<span style="color: white">Ads Ethereum</span>  
+				</div>
+				<div class="panel-heading" style="background:  black ">
+					<h4 style="color: white">Gana Ethereum viendo Ads</h4>
+					<a target="_blank" href=" https://adeth.cc?r=yoursetneo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<span style="color: white">Ads Cash </span>
+				</div>
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<h4 style="color: black">Gana Cash viendo Ads</h4>
+					<a target="_blank" href=" https://www.adbch.cc?r=yoursetneo  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--	
+	<div class="row">
+		<div class="col-md-12" >
+			<div class="panel-success">
+				<div class=" panel-heading" style="background: #5dade2"><center><h4 style="color: black">Faucets Roll cada hora PAGO INSTANTANEO A <a target="_blank" style="color: white" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4></center> </div>
+			</div>
+		</div>
+	</div><br>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #f1c40f">
+					<span style="color: white">Btc-Ok.net</span>  
+				</div>
+				<div class="panel-heading" style="background: #f1c40f">
+					<h4 style="color: black">Gana de 0.00000003 a 0.00312849 BTC, ROLL de cada hora + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://btc-ok.net/?r=13xhWo3AJSVUAxD7DtMNRRr1gh5a3k4Ygw" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #ffb833 ">
+					<span style="color: white">Doge-Ok.net </span>
+				</div>
+				<div class="panel-heading" style="background:  #ffb833 ">
+					<h4 style="color: black">Gana de 0.0005 a 500 Doge, ROLL de cada hora + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href=" https://doge-ok.net/index.php?r=DC63tuWGri58w6Bm65cTEARo6UXSTWWQMh " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<span style="color: white">Ltc-Ok.net</span> 
+				</div>
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<h4 style="color: black">Gana de 0.00000250 a 1.52595990 LTC, ROLL de cada hora + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href=" https://ltc-ok.net/index.php?r=MTLPpYfqFsEb9L4YmTxzP4WiccNHiAPwaX " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #5dade2">
+					<span style="color: white">Dash-Ok.net</span>
+				</div>
+				<div class="panel-heading" style="background: #5dade2">
+					<h4 style="color: black">Gana de 0.00000158 a 0.00000158 DASH, ROLL de cada hora + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://dash-ok.net/index.php?r=XeWkumDcRWCf55QYuJw2ykjeCTaQi76qe4" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #f9041c ">
+					<span style="color: white">Trx-Ok.net</span>  
+				</div>
+				<div class="panel-heading" style="background:  #f9041c ">
+					<h4 style="color: black">Gana de 0.004 a 4000 TRX, ROLL de cada hora + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href=" https://trx-ok.net/index.php?r=TY5n9Dn74CsMzmc55hk1yvpX9dFX7L7YXE " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #0e0a8d ">
+					<span style="color: white">Dgb-Ok.net </span>
+				</div>
+				<div class="panel-heading" style="background:   #0e0a8d  ">
+					<h4 style="color: black">Gana de 0.00399999 a 100.54399999DGB, ROLL de cada hora + 25% comision por referidos + Ads</h4>
+					<a target="_blank" href="  https://dgb-ok.net/index.php?r=DN49uXfLErvRFpj3g3tM8EFjjoLxHGRmLH  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>			
+							
+							
+
+
+	<div class="row">
+		
+		
+		
+		
+		
+		<div class="col-md-2">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					CryptoTap	
+				</div>
+				<div class="panel-heading">
+					<h4>Instala este Navegador y gana bitcoin por navegar, mineria mientras navegas..</h4>
+					<a target="_blank" href="https://cryptotabbrowser.com/21741911" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	TERCERA FILA
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3>Te Recomiendo esta session de Nuevas paginas ADS con bajos minimos de retiro a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> aca abajo te dejo los enlaces correspondientes a cada CryptoMoneda</h3>
+				</div>
+				<div class="panel-heading">
+					<div class="form-groud">
+						<h4>
+							
+							
+								
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	CUARTA FILA
+	<div class="row">
+		
+		
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Nueva adDOGE
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Gane DOGE por ver anuncios</h4>
+					<a class="btn btn-primary" href="https://addoge.cc?r=yoursetneo"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+			
+			
+	</div>
+	<div class="row">				
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Adbtc.top
+					<h4>Gana hasta 100 satoshi diarios en Ads/ minimo de retiro 2000 satoshi  a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a href="https://ref.adbtc.top/1992755" target="_blank" border="0"><img src="https://adbtc.top/promo/banner_728x90.png" width="200" height="60"/></a>	
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					CoinpayU
+					<h4>Gana hasta 100 satoshi diarios en Ads/ minimo de retiro 2000 satoshi  a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a href="https://www.coinpayu.com/?r=jose1975neo1" target="_blank"><img src="https://www.coinpayu.com/static/earners_banner/468X60.gif" width="200" height="60"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	SEGUNDA FILA
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free BTC
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Gana hasta 20 satoshi cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-bitcoin/?r=bc1qgpc5v6ncn6dse9a5pzl8yzdy7aw7vtnmtcv8uy" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+		   	 		Clain Free LTC
+		   		</div>
+		   		<div class="panel-heading">
+		   	 		<h4 >Gana hasta 2500 LTC cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+		   			<a href="https://claimfreecoins.io/free-litecoin/?r=MAJMnLr7qgswyPG8b8DqKfJEJvS9j7rtQZ" class="btn btn-primary"   target="_blank"> Registrate</a>
+		  		</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Dogecoin
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hasta 0.4 Dogecoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-dogecoin/?r=D6wRKmWED5MWAj23iij1a2W75fstSc4Mbq" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Tron
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Tron cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-tron/?r=TG2EJtEqecESsNzUAHp43VX4b4EoznKryz" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>	
+	</div>
+	ERCERA FILA
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Digibyte
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Digibyte cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-digibyte/?r=DGJx6ga5atVEDCn8tXE6eop8GorJgQ7MFA" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Tether
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Tether cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-tether/?r=TG2EJtEqecESsNzUAHp43VX4b4EoznKryz" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Clain Free Ethereum
+				</div>
+				<div class="panel-heading">
+					<h4>Gana hasta 100 Ethereum cada 5 minutos pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+					<a href="https://claimfreecoins.io/free-ethereum/?r=0x768a787f898cf0930EF804106EfA89755278D876" class="btn btn-primary"   target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Clain Free Dash
+				</div>
+				<div class="panel-heading">
+					<h4>Gana hasta 0.4 Dash cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+					<a href="https://claimfreecoins.io/free-dash/?r=XrxqS5ZKKJP8qZBPnzJmBeUPpqVN6MCa9V" class="btn btn-primary"   target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>		
+	CUARTA FILA
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					PAIDvertisements
+					<h4>Gana hasta mas de $0.100 en ADS diario</h4>
+					<a target="_blank" href="https://paidvertisements.com/?ref=jose1975neo"><img src="https://paidvertisements.com/728x90.gif" border="0" width="200" height="60" /></a>
+				</div>
+			</div>
+		</div>
+		div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Golden Faucet
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Nueva Faucet Gana Satoshi cada 5 minutos el minimo de retiro es 1000 satoshi</h4>
+					<a target="_blank" href="https://www.goldenfaucet.io/?ref=yourneoset" class="btn btn-primary">Registrate</a>
+			  	</div>
+			</div>
+		</div
+		<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	BitShark <span style="color:red" title="New">New Faucet</span>
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Please click or tap on miner, you will get a part of BTC that we have mining. The number of BTC that you get is randomly in the rage of 0,00000005 BTC to 0,1 BTC for each round. </h4>
+						   	 	<a href="https://bitshark.io/r/379740" class="btn btn-primary"  target="_blank"> Registrate</a>
+						  	</div>
+						</div>
+					</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					FacetSpin
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Clain 5 satoshi cada 30 min y 20 satoshi en Bitcoin cash, 10 Gwai, 60 litoshi cada 5 min pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a class="btn btn-primary" href="https://www.faucetspin.com/?ref=27206"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+				
+	<div class="row">
+		
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Faucetbit<span style="color:red" title="New">New Faucet</span>
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Puedes Ganar hasta 200000 satoshi cada 60 minutos</h4>
+			   	 	<a href="https://faucetbit.io/?ref=jose1975neo" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+				FireFaucet							
+				</div>
+				<div class="panel-heading">
+					<h4>AutoFaucet, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> + 20% comision por referidos + Ads</h4>
+					<a target="_blank" href="https://firefaucet.win/ref/jose1975neo" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					COINIS.CLUB
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Gana 0.0005 Dogecoin cada 5 minutos pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a class="btn btn-primary" href="https://coinis.club/?r=jose1975neo"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Bitking <span style="color:red" title="New">New Faucet</span>
+				</div>
+				<div class="panel-heading">
+					<h4>Gana de 0.00000005 hasta 0.00025000 en Bitcoin cada Hora 50% comision por referidos</h4>
+					<a href="https://bitking.biz/signup?r=20003" class="btn btn-primary"  target="_blank"> Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Tron
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hasta 300$ en Tron cada Hora + 50% comision por Referidos sin capcha</h4>
+			   	 	<a href="https://free-tron.com/?ref=133468" class="btn btn-primary"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Dash
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hasta 300$ en Dash cada Hora + 50% comision por Referidos sin capcha</h4>
+			   	 	<a href="https://freedash.io/?ref=43266" class="btn btn-primary"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Bitcoin
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hasta 300$ en Bitcoin cada Hora + 50% comision por Referidos sin capcha</h4>
+			   	 	<a href="https://freebitcoin.io/?ref=362464" class="btn btn-primary"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>	
+	SEXTA FILA
+	<div class="row">
+		
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					NUEVA NUEVA FAUCET coincity !!
+				</div>
+				<div class="panel-heading">
+					<h4> GANA $0.015 USD CADA SEGUNDO 250 RECLAMOS DIARIOS, 100% COMISION REFERIDOS, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://coincity.in/?r=17983" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	MoreMoney
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Satoshi cada 60 minutos + 15% comision por referidos + Ads</h4>
+			   	 	<a href="https://moremoney.io/?ref=611139" class="btn btn-primary" target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Free-Ethereum
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hasta 200$ en Ethereum cada Hora + 50% comision por Referidos</h4>
+			   	 	<a  href="https://free-ethereum.io/?referer=830664" class="btn btn-primary" target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Nueva BitcoinPtc.Top
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Gana 10000 satoshis diarios en faucet y viendo anuncios</h4>
+					<a class="btn btn-primary" href="https://bitcoinptc.top/?ref=yoursetneo"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	</div>		
+SEPTIMA FILA
+	<div class="row">	
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Bitpick <span style="color:red" title="New">New Faucet</span>
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Sube de Nivel jugando y Gana de 0.00000007 hasta 0.00025000 en Bitcoin cada Hora 50% comision por referidos</h4>
+			   	 	<a href="https://bitpick.co/?ref=242449" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+				
+	SEPTIMA FILA
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3>Te Recomiendo esta session de Faucets en donde puedes ganar hasta 300$ cada Hora aca abajo te dejo los enlaces correspondientes a cada CryptoMoneda</h3>
+				</div>
+				<div class="panel-heading">
+					<div class="form-groud">
+						<h4>
+						
+							
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Free-Litecoin
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana hasta 200$ en Litecoin y Ethereum cada Hora + 50% comision por Referidos</h4>
+						   	 	<h1><a href="https://free-litecoin.com/login?referer=1137883" class="btn btn-primary"  target="_blank"> Resgistrate en Litecoin</a></h1>
+						   	 	<h1><a href="https://free-ethereum.io/?referer=830664" class="btn btn-primary"  target="_blank"> Resgistrate en Ethereum</a></h1>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+							   Free-Ethereum
+							</div>
+							<div class="panel-heading">
+							   	<h4>Gana hasta 200$ en Ethereum cada Hora + 50% comision por Referidos</h4>
+							   	<a href="https://free-ethereum.io/?referer=830664" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>-->
+					<!--<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								Free-Litecoin (otra)
+								<h4>Gana hasta 300$ en Litecoin cada Hora + 50% comision por Referidos</h4>
+								<a href="https://free-ltc.com/?ref=2584" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Free-Ethereum (otra)
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana hasta 300$ en Ethereum cada Hora + 50% comision por Referidos</h4>
+						   	 	<a href="https://freeethereum.com/?ref=80753" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<!--OBTAVA FILA-->
+				<!--<div class="row">
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Link
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana hasta 300$ en Link cada Hora + 50% comision por Referidos sin capcha</h4>
+						   	 	<h1><a href="https://freechainlink.io/?ref=47598" class="btn btn-primary"  target="_blank">Registrate</a></h1>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+							   USD Coin
+							</div>
+							<div class="panel-heading">
+							   	<h4>Gana hasta 300$ en USD Coin cada Hora + 50% comision por Referidos sin capcha</h4>
+							   	<a href="https://freeusdcoin.com/?ref=94139" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								Free Cardano
+								<h4>Gana hasta 300$ en Litecoin cada Hora + 50% comision por Referidos sin capcha</h4>
+								<a href="https://freecardano.com/?ref=246507" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Coin Faucet
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana hasta 300$ en Ethereum cada Hora + 50% comision por Referidos sin capcha</h4>
+						   	 	<a href="https://coinfaucet.io/?ref=692169" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				
+				<!--NOVENA FILA-->
+				
+				
+				<!--<div class="row">
+					SEXTA FILA
+
+				<div class="row">
+					
+					
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								Free-Dogecoin
+								<h4>Gana hasta 300$ en Dogecoin cada Hora + 50% comision por Referidos</h4>
+								<a href="https://free-doge.com/?ref=9364" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								Binance Coin
+								<h4>Gana hasta 300$ en BNB cada hora sin capcha + 50% comision de referidos</h4>
+								<a href="https://freebinancecoin.com/?ref=62153" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Tether
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana hasta 300$ en Tether cada Hora + 50% comision por Referidos sin capcha</h4>
+						   	 	<a href="https://freetether.com/?ref=105895" class="btn btn-primary"  target="_blank">Registrate</a>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					
+				</div>-->
+					<!--QUINTA FILA
+				
+				<div class="row"> 
+					-->
+					
+					<!--<div class="col-md-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+						   	 AutoFaucet Dogecoin
+						 </div>
+						 <div class="panel-heading">
+						   	<h4>Gana Dogecoin de manera automatica + 30% comision por referidos + pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> luego de tres(3) recargas de la barra (3 minutos)</h4>
+						   	<a href="https://faucetcoins.org/doge?r=DC63tuWGri58w6Bm65cTEARo6UXSTWWQMh" class="btn btn-primary" target="_blank">Registrate</a>
+						 </div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+						   	 AutoFaucet Tron
+						   </div>
+						   <div class="panel-heading">
+					   	 	<h4>Gana Tron de manera automatica + 30% comision por referidos + pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> luego de tres(3) recargas de la barra (3 minutos)</h4>
+					   	 	<a href="https://faucetcoins.org/trx?r=TY5n9Dn74CsMzmc55hk1yvpX9dFX7L7YXE" class="btn btn-primary"  target="_blank">Registrate</a>
+						  </div>
+					</div>
+				</div>-->
+					
+				
+					
+					<!--<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Free Bitcoin Fucet <span style="color:red" title="New">New Faucet</span>
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana 2 satoshi cada 5 min + Pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por referidos + Ads y tikets de Loteria</h4>
+						   	 	<a href="https://1xbitcoins.com/ref/jose1975neo" class="btn btn-primary"  target="_blank"> Registrate</a>
+						  	</div>
+						</div>
+					</div>
+						
+					
+				</div>
+			-->
+			<!--<div class="row">
+				<div class="col-md-12">
+					<div class="panel-success">
+						<div class=" panel-heading"><center><h4> PTC </h4></center> </div>
+					</div>
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	Fautsy
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana Bitcoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+						   	 	<a href="https://www.fautsy.com/?r=bc1qv5pjx0ha3536a9h35zayfuq82vd422tg873q7v" class="btn btn-primary"  target="_blank">Registrate</a>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	StarBits
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana Bitcoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+						   	 	<a href="http://starbits.io/?r=bc1qv5pjx0ha3536a9h35zayfuq82vd422tg873q7v" class="btn btn-primary"   target="_blank">Registrate</a>
+						  	</div>
+						</div>
+					</div>
+	
+				
+				<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	GoBits.io
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana Bitcoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+						   	 	<a href="http://gobits.io/?r=bc1qv5pjx0ha3536a9h35zayfuq82vd422tg873q7v" class="btn btn-primary"  target="_blank"> Registrate</a>					  	
+						   	 </div>
+						</div>
+					</div>
+				<div class="col-md-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+					   	 	NEOBUX
+					   	 	<h4>OFERTAS + TRABAJOS + PTC + PROGRAMA DE REFERIDOS</h4>
+					   	 	<a href="https://www.neobux.com/?r=KLIBERT1" target="_blank"><img src="https://www.neobux.com/imagens/banner9.gif" width="200" height="60"></a>
+					  	</div>
+					</div>
+				</div>
+				
+			</div>
+		
+			<div class="row">
+					<div class="col-md-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+					   	 	OJOOO WAD
+					   	 	<h4 >Gana 0.030 USD diario + Programa de Referidos</h4>
+					   	 	<a href="https://wad.ojooo.com/register.php?ref=KLIBERT1" target="_blank" rel="nofollow"><img src="https://wad.ojooo.com/bs.php?lng=es&u=2355898"  width="200" height="60" align="center" /></a>
+					  	</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+						   	BTCclicks
+							<h4>Gana Bitcoin viendo Ads 80% comision por Referidos</h4>
+						 	<a href="https://btcclicks.com/?r=0d017g31" target="_blank"><img src="http://btcclicks.com/img/rectangle.png" width="200" height="60" alt="BTCClicks.com Banner"></a> </h1>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+			<div class="panel panel-success" >
+				<div class="panel-heading" style="background: #1a5276">
+					<span style="color: white">Hascoin</span>
+				</div>
+				<div class="panel-heading" style="background: #1a5276">
+					<h4 style="color: white">Gana 0.00000280 Litecoin cada Hora y gane el 25% de comision por referidos + pago directo e instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a href="https://hascoin.me?r=5qm1gZGL76WvGdK8" class="btn btn-primary"  target="_blank"> Registrate</a>
+				</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	i-Bits.io
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana Bitcoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+						   	 	<a href="https://i-bits.io/?r=bc1qv5pjx0ha3536a9h35zayfuq82vd422tg873q7v" class="btn btn-primary"   target="_blank"> Registrate</a>
+						  	</div>
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+						   	 	ClainBits
+						   	</div>
+						   	<div class="panel-heading">
+						   	 	<h4>Gana Bitcoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+						   	 	<a href="http://claimbits.io/?r=bc1qv5pjx0ha3536a9h35zayfuq82vd422tg873q7v" class="btn btn-primary"  target="_blank">Registrate</a>
+						  	</div>
+						</div>
+					</div>	
+				
+			</div>
+			-->
+		
+	</div>
+	<div class="panel-body" style="background:transparent; display: none" id="caja_farming">
+		<div class="row">
+			<div class="col-md-6">
+				<div style="background: white">
+					<div class="panel-heading" style="background: #4C9EAD" >
+						<span><h4>Fishing-money</h4> </span>	
+					</div>
+					<div class="panel-heading">
+
+						<h4>Como Funciona?</h4>
+						<h4><ul>
+								<li> Regístrese en el juego y obtenga un bono de 15000 de plata.</li><br>
+								<li>Compra dragones que traerán monedas</li><br>
+								<li>Vender monedas por plata</li><br>
+								<li>Cambia plata por dinero real</li>
+							</ul>
+						</h4>
+						<a target="_blank" href="https://dragon-money.org/?i=245" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div style="background: white">
+					<div class="panel-heading" style="background: #4C9EAD" >
+						<span><h4>Coin Birds</h4> </span>	
+					</div>
+					<div class="panel-heading">
+
+						<h4>Como Funciona?</h4>
+						<h4><ul>
+								<li> Regístrese en el juego y obtenga un bono de 3000 de plata.</li><br>
+								<li>Compra pajaros que traerán Huevos</li><br>
+								<li>Vender Huevos por plata</li><br>
+								<li>Cambia plata por dinero real</li>
+							</ul>
+						</h4>
+						<a target="_blank" href="https://coin-birds.com/?en=jose1975ne" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-12">
+				<div style="background: white">
+					<div class="panel-heading" style="background: #4C9EAD" >
+						<span><h4>Fishing-money</h4> </span>	
+					</div>
+					<div class="panel-heading">
+
+						<h4>Como Funciona?</h4>
+						<h4><ul>
+								<li>Fishing-money.org es un emocionante juego económico con la capacidad de ganar dinero real. Brindamos una oportunidad única de ganar dinero real sin tener que invertir, simplemente jugando un juego emocionante.</li><br>
+								<li>La esencia del juego: comprar cañas de pescar, que atraparán peces. Cuanto más cara sea la caña de pescar, más peces atrapará. ¡El número de varillas no está limitado!</li><br>
+								<li>¡Puedes intercambiar pescado por plata y plata por dinero real!</li><br>
+								<li>Por registrarte, recibirás un bono de 13.000 platas en tu saldo para compras.</li><br>
+								<li>El curso del juego es 100 de plata = 1 rublo.</li><br>
+								<li>También hay bonos y juegos en el proyecto.</li>
+							</ul>
+						</h4>
+						<a target="_blank" href="https://fishing-money.org/?i=135" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+		</div><br>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading" style="background:#0b0794">
+						<span style="color: white">Chickens Farm</span>
+					</div>
+					<div class="panel-heading" style="background:white">
+						<h4 style="color: black">COMO FUNCIONA? </h4>
+						<h4 style="color: ">1.Primero debes crear una cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a>, si ya tienes una cuenta puedes Omitir este paso</h4>
+						<h4 style="color: ">2.Recibiras 10.000 Plata Gratis</h4>
+						<h4 style="color: ">3.Compra dos Gallos de 5.000 Plata</h4>
+						<h4 style="color: ">4. Listo comenzaras a recibir huevos de tus Gallos, Huevos que podras intencambiar por Plata y luego Retirar a tu cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a> ó Comprar mas Gallos Para aumentar tus Ingresos</h4>
+						<a target="_blank" href="https://chickens-farm.org/?i=68" class="btn btn-primary">Registrate Aquí</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading" style="background:#0b0794">
+						<span style="color: white">Sueldito</span>
+					</div>
+					<div class="panel-heading" style="background:white">
+						<h4 style="color: black">COMO FUNCIONA? </h4>
+						<h4 style="color: ">1.Primero debes crear una cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a> ó <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a>, si ya tienes una cuenta puedes Omitir este paso</h4>
+						<h4 style="color: ">2.Reclamaras una Prpiedad Gratis</h4>
+						<h4 style="color: ">3.Esta Propiedad te Generara coins cada 24 hrs, No olvides reclamar tu Bonus diario de 10 coins</h4>
+						<h4 style="color: ">4. Listo el minimo de retiro es de 200 coins,  Luego podras cajear tus coins por Dolares y  Retirar a tu cuenta <a target="_blank" href="https://payeer.com/?session=22108842">Payeer</a> ó <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> Tambien puedes Comprar mas Propiedades Para aumentar tus Ingresos</h4>
+						<a target="_blank" href="https://sueldito.com?aff=30984" class="btn btn-primary">Registrate Aquí</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="panel-body" style="background:transparent; display: none" id="faucet_5">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:#0b0794">
+					<span style="color: white">ShibaFaucet</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">Faucet 5 minutos, Mineria, tareas, ofertas, Comision por referidos juegos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://shibafaucet.net/?r=1805" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:#0b0794">
+					<span style="color: white">btcbunch</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">Faucet 5 minutos, Mineria, tareas, ofertas, Comision por referidos juegos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://btcbunch.com/?r=53636" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:#0b0794">
+					<span style="color: white">cryptoaffiliates</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">Faucet 5 minutos, Mineria, tareas, ofertas, Comision por referidos juegos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://cryptoaffiliates.store/?r=9893" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:#0b0794">
+					<span style="color: white">CryptoFenz</span>
+				</div>
+				<div class="panel-heading" style="background:white">
+					<h4 style="color: black">Faucet 5 minutos, Mineria, tareas, ofertas, Comision por referidos juegos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://cryptofenz.xyz/?r=5171" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #19ecbf">
+					<span style="color: black">Litecoin Fucet</span>
+				</div>
+				<div class="panel-heading" style="background: #19ecbf">
+					<h4 style="color: black">Gana 0.00000100 Litecoin cada 5 min + Pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por referidos + Ads y tikets de Loteria</h4>
+					<a href="https://litfaucet.com/?r=jose1975neo" class="btn btn-primary"  target="_blank"> Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #1c2833 ">
+					<span style="color: white">Bitcoin Trophy</span>
+				</div>
+				<div class="panel-heading" style="background:  #1c2833 ">
+					<h4 style="color: white">reclamos de faucet cada 5 minutos + 10% comision por Referidos bajo minimo de retiro pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a href="https://bitcointrophy.com/?r=6336" class="btn btn-primary"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Konstantinova Faucet
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Gane 0.0011 DOGE y 161 ZECs cada 5 minutos pago instatntaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a class="btn btn-primary" href="https://konstantinova.net/dogecoin/?r=DCKariRhxs4LXaChoDSm9YcmZ4cV5EGrhK"  target="_blank">DOGE</a> y 
+					<a class="btn btn-primary" href="https://konstantinova.net/zcash/?r=t1RU9Q6ugSttj3gJK5s3m5DHD2iMWDZP5Mu"  target="_blank">ZECs</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">earnbitmoon</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Roll cada 5 minutos , 25% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://earnbitmoon.club/?ref=8641" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Faucet Cryptoearns
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Faucet 2 satoshi cada 5 minutos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 10% comision por Referidos</h4>
+			   	 	<a href="https://www.cryptoearns.com/ref/13xhWo3AJSVUAxD7DtMNRRr1gh5a3k4Ygw" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #5d6d7e ">
+					<span style="color: white">Faucet ptc-crypto.in</span>
+				</div>
+				<div class="panel-heading" style="background:  #5d6d7e ">
+					<h4 style="color: white">Faucet cada 2 minuntos, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> + 30% comision por referidos + PTC</h4>
+					<a target="_blank" href="https://ptc-crypto.in/?r=854" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #27ae60">
+					<span style="color: black">EmeraldFaucet </span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4>Cada 5 min, GANA DOGE 20% COMISION REFERIDOS, Sube de Nivel y gana mas, pago Instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://emeraldfaucet.fun/?r=DCKariRhxs4LXaChoDSm9YcmZ4cV5EGrhK" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">Claim Bits</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Roll cada 5 minutos , 40% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://claimbits.net/?ref=121960" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #e40b1d ">
+					<span style="color: white">Get Bitcoin</span>
+				</div>
+				<div class="panel-heading" style="background: black">
+					<h4 style="color: white">Roll cada 5 minutos , 25% comision por referidos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a target="_blank" href="https://get-bitcoin.net/?ref=27841" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	MixFaucet
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Faucet cada 5 minutos pago a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 20% comision por Referidos</h4>
+			   	 	<a href="https://mixfaucet.com/?r=24712" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #5d6d7e ">
+			   		<span style="color: white"> LiteFaucet</span>
+			  	 </div>
+				<div class="panel-heading" style="background:  #5d6d7e ">
+			   	 	<h4 style="color: white">Claim $0.0005 every 5 minute You have 40 claims left today. pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 30% comision por referidos </h4>
+			   	 	<a href="https://litefaucet.in/?r=517" class="btn btn-primary"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free BTC
+			   	 </div>
+			   	 <div class="panel-heading">
+			   	 	<h4 >Gana hasta 20 satoshi cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-bitcoin/?r=bc1qgpc5v6ncn6dse9a5pzl8yzdy7aw7vtnmtcv8uy" class="btn btn-primary" target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+		   	 		Clain Free LTC
+		   		</div>
+		   		<div class="panel-heading">
+		   	 		<h4 >Gana hasta 2500 LTC cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+		   			<a href="https://claimfreecoins.io/free-litecoin/?r=MAJMnLr7qgswyPG8b8DqKfJEJvS9j7rtQZ" class="btn btn-primary"   target="_blank"> Registrate</a>
+		  		</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Dogecoin
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana hasta 0.4 Dogecoin cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-dogecoin/?r=D6wRKmWED5MWAj23iij1a2W75fstSc4Mbq" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Tron
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Tron cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-tron/?r=TG2EJtEqecESsNzUAHp43VX4b4EoznKryz" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Digibyte
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Digibyte cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-digibyte/?r=DGJx6ga5atVEDCn8tXE6eop8GorJgQ7MFA" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	Clain Free Tether
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana Tether cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+			   	 	<a href="https://claimfreecoins.io/free-tether/?r=TG2EJtEqecESsNzUAHp43VX4b4EoznKryz" class="btn btn-primary"  target="_blank">Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Clain Free Ethereum
+				</div>
+				<div class="panel-heading">
+					<h4>Gana hasta 100 Ethereum cada 5 minutos pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+					<a href="https://claimfreecoins.io/free-ethereum/?r=0x768a787f898cf0930EF804106EfA89755278D876" class="btn btn-primary"   target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Clain Free Dash
+				</div>
+				<div class="panel-heading">
+					<h4>Gana hasta 0.4 Dash cada 5 minutos pago directo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por Referidos</h4>
+					<a href="https://claimfreecoins.io/free-dash/?r=XrxqS5ZKKJP8qZBPnzJmBeUPpqVN6MCa9V" class="btn btn-primary"   target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="panel-body" style="background:transparent; display: none" id="caja_faucet_60">
+
+	<div class="row" >
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 <span style="color: black">	Free-Litecoin </span>
+			   	</div>
+			   	<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 	<h4 style="color: black">Gana hasta 200$ en Litecoin cada Hora + 50% comision por Referidos</h4>
+			   	 	<a href="https://free-litecoin.com/login?referer=1137883" class="btn btn-primary"  target="_blank">  Litecoin</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 	<span style="color: black">LitKing </span>
+			   	</div>
+			   	<div class="panel-heading" style="background:  #aab7b8 ">
+			   	 	<h4 style="color: black">Gana de 0.00000650 hasta 0.06600000 en LTC cada Hora 25% comision por referidos</h4>
+			   	 	<a href="https://www.litking.biz/signup?r=56308" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<span style="color: black">Litecoin Faucet	</span>
+				</div>
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<h4 style="color: black">Gane 0.00000627 Litecoin cada 60 minutos, pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 25% comision por referidos</h4>
+					<a target="_blank" href="https://litecoin-faucet.com/?r=MTLPpYfqFsEb9L4YmTxzP4WiccNHiAPwaX" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #b9770e">
+					<span style="color: black">Dogecoin Faucet	</span>
+				</div>
+				<div class="panel-heading" style="background: #b9770e">
+					<h4 style="color: black">Gane 0.004 Doge cada 60 minutos, pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 25% comision por referidos</h4>
+					<a target="_blank" href="https://doge-faucet.com/?r=DC63tuWGri58w6Bm65cTEARo6UXSTWWQMh" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #f39c12">
+			   	 	<span style="color: black">Freebitcoin</span>
+			   	</div>
+			   	<div class="panel-heading" style="background: white">
+			   	 	<h4 style="color: black">Gana hasta 200$ cada 60 minutos + 50% comision por referidos + tickes de loteria por cada reclamo</h4>
+			   	 	<a href="https://freebitco.in/?r=39380272" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #6e2c00">
+					<span style="color: white">Free Dogecoin<span>
+				</div>
+				<div class="panel-heading" style="background:  #6e2c00 ">
+					<h4 style="color: white">Gana hasta 10 dogecoin cada Hora + 100% comision por referidos + pago directo e instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a href="https://fdg.exchanging.cc/en/197005/" class="btn btn-primary"  target="_blank"> Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Bitking <span style="color:red" title="New">New Faucet</span>
+				</div>
+				<div class="panel-heading">
+					<h4>Gana de 0.00000005 hasta 0.00025000 en Bitcoin cada Hora 50% comision por referidos</h4>
+					<a href="https://bitking.biz/signup?r=20003" class="btn btn-primary"  target="_blank"> Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					Nueva FlashFaucet
+				</div>
+				<div class="panel-heading">
+					<h4 class="card-text">Gane hasta $35 cada Hora minimo de retiro $0.100 a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+					<a class="btn btn-primary" href="https://www.flashfaucet.com?r=yoursetneo"  target="_blank">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+			
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					BitShark <span style="color:red" title="New">New Faucet</span>
+				</div>
+				<div class="panel-heading">
+					<h4>Please click or tap on miner, you will get a part of BTC that we have mining. The number of BTC that you get is randomly in the rage of 0,00000005 BTC to 0,1 BTC for each round. </h4>
+					<a href="https://bitshark.io/r/379740" class="btn btn-primary"  target="_blank"> Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+			   	 	BCH Fucet <span style="color:red" title="New">New Faucet</span>
+			   	</div>
+			   	<div class="panel-heading">
+			   	 	<h4>Gana 0.00000110 BCH cada 60 min + Pago instantaneo a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a> 50% comision por referidos + Ads y tikets de Loteria</h4>
+			   	 	<a href="https://freecryptopay.com/?r=jose1975neo" class="btn btn-primary"  target="_blank"> Registrate</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<span style="color: white">Cardano </span>
+				</div>
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freecardano.com/?ref=246507  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #f1c40f">
+					<span style="color: white">Btc</span>  
+				</div>
+				<div class="panel-heading" style="background: #f1c40f">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href="https://freebitcoin.io/?ref=362464" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+								
+	<div class="row">
+		
+		<div class="col-md-6">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<span style="color: white">Ltc</span> 
+				</div>
+				<div class="panel-heading" style="background:  #aab7b8 ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://free-ltc.com/?ref=2584 " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background: #5dade2">
+					<span style="color: white">Dash</span>
+				</div>
+				<div class="panel-heading" style="background: #5dade2">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href="https://freedash.io/?ref=43266" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #ffb833 ">
+					<span style="color: white">Doge </span>
+				</div>
+				<div class="panel-heading" style="background:  #ffb833 ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://free-doge.com/?ref=9364 " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #f9041c ">
+					<span style="color: white">Trx</span>  
+				</div>
+				<div class="panel-heading" style="background:  #f9041c ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://free-tron.com/?ref=133468 " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #0e0a8d ">
+					<span style="color: white"> USDT </span>
+				</div>
+				<div class="panel-heading" style="background:   #0e0a8d  ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freetether.com/?ref=105895  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  black ">
+					<span style="color: white">Ethereum</span>  
+				</div>
+				<div class="panel-heading" style="background:  black ">
+					<h4 style="color: white">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freeethereum.com/?ref=80753" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<span style="color: white">Binance </span>
+				</div>
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freebinancecoin.com/?ref=62153  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  #f9041c ">
+					<span style="color: white">Neo</span>  
+				</div>
+				<div class="panel-heading" style="background:  #f9041c ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freeneo.io/?ref=57928" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #0e0a8d ">
+					<span style="color: white"> Link </span>
+				</div>
+				<div class="panel-heading" style="background:   #0e0a8d  ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freechainlink.io/?ref=47598  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:  black ">
+					<span style="color: white">Usd Coin</span>  
+				</div>
+				<div class="panel-heading" style="background:  black ">
+					<h4 style="color: white">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://freeusdcoin.com/?ref=94139" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>										 
+		<div class="col-md-3">
+			<div class="panel panel-success">
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<span style="color: white">CoinFaucet </span>
+				</div>
+				<div class="panel-heading" style="background:   #38AA17 ">
+					<h4 style="color: black">Gana hasta $200 Roll 60 minutos</h4>
+					<a target="_blank" href=" https://coinfaucet.io/?ref=692169  " class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="panel-body" style="background:transparent; display: none" id="caja_mineria">
+
+		<dir class="row">
+			
+			<div class="col-md-6">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black; color: white">
+						Roller Coin	
+					</div>
+					<div class="panel-heading" style="background: black; color: white">
+						<h4>Como Funciona?</h4>
+						<h4>1.Roller Coin es una plataforma que realmente paga</h4><br>
+						<h4>2.Es una Mineria en la Nube, aumenta tu Poder de Mineria Jugando los Juegos de Roller Coin, mientras mas juegues mas ganancias</h4>
+
+						<a target="_blank" href="https://rollercoin.com/?r=kmy4cgf0" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						CryptoTap	
+					</div>
+					<div class="panel-heading">
+						<h4>Instala este Navegador y gana bitcoin por navegar, mineria en la nube mientras navegas..</h4>
+						<h4>No consume Recursos Solo Necesitas Navegar</h4>
+						<a target="_blank" href="https://cryptotabbrowser.com/21741911" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+
+		</dir>
+
+
+		<div class="row">
+			
+			<div class="col-md-6">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black">
+					<a target="_blank" href="https://app.stormgain.com/friend/BNS63905443" class="btn btn-primary">	<img src="images/banner_stormgain.jpg" style="width:95%;"> </a>
+					</div>
+					<div class="panel-heading" style="background: black">
+						<h5 style="color: white"> STORMGAIN MINER +1000 SATOSHI GRATIS por día!
+						Cloud Miner hace posible minar monedas BTC en servidores de StormGain. Activa Miner en turnos de 4 horas y manda los fondos a tu monedero cuando alcances el equivalente de, al menos, 10 USDT en BTC. No necesitas un equipo caro. Sin consumo de CPU. Rápido y sin riesgos.
+						Regístrate usando el código promocional "MINER" y recibe $5 USDT gratis.</h5>
+						<a target="_blank" href="https://app.stormgain.com/friend/BNS63905443" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-success">
+					<div class="panel-heading" style="background: #9f6c05 ">
+						<span style="color:black">Mineria Doge EN LA NUBE</span>
+					</div>
+					<div class="panel-heading" style="background: #9f6c05 ">
+						<h4 style="color: black">Reitos despues de 3 Doge</h4>
+						<a target="_blank" href="https://wakedoge.io/r/15211" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-12">
+				<div style="background: white">
+					<div class="panel-heading" style="background: #4C9EAD" >
+						<span><h4>Rustle.pro</h4> </span>	
+					</div>
+					<div class="panel-heading">
+						<h4><ul>
+								<li>¡Regístrese y active su cuenta usando la contraseña en la carta que llegó a su correo electrónico!</li>
+								<li>Compre flujos y comience a extraer dinero para su retiro.</li>
+								<li>Cada participante tiene la oportunidad de encontrar un bloque durante la extracción y recibir una recompensa monetaria de hasta 100 000 rublos. a la conclusión.</li>
+								<li>Invite referidos y obtenga el 20% de cada reposición por un referido, también recibirá un 5%. para cada bloque encontrado por la referencia.</li>
+								<li>Participa en concursos y gana premios en efectivo por retiro.</li>
+							</ul>
+						</h4>
+						<h4>No consume Recursos Solo Necesitas Navegar</h4>
+						<a target="_blank" href="https://rustle.pro/?ref=1827" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+
+	<div class="panel-body" style="background:transparent; display: none" id="caja_billeteras">
+		<div class="col-md-6">
+			<div class="panel" >
+				<div class="panel-heading" style="background: blue">
+					<span style="color: white">Faucetpay wallet<span>
+				</div>
+				<div class="panel-heading" style="background: white">
+					<h4 style="color: black">Faucetpay la Mejor Micro Billetera para depositar tus CriptoMonedas</h4>
+					<a target="_blank" href="https://faucetpay.io/?r=777324" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-success" >
+				<div class="panel-heading" style="background: #f7dc6f">
+					<span style="color: black">Binance wallet<span>
+				</div>
+				<div class="panel-heading" style="background: #f7dc6f">
+					<h4 style="color: black">Binance la Mejor wallet</h4>
+					<a target="_blank" href="https://accounts.binance.com/en/register?ref=55637715" class="btn btn-primary">Registrate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="panel-body" style="background:transparent; display: none;" id="caja_inv">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black">
+						<span style="color: white">Trust Investing<span>
+					</div>
+					<div class="panel-heading">
+						<h4 style="color: black">Gana el 20% de tu inversion cada mes</h4>
+						<h4 style="color: black">hay varios paquetes de inversion</h4>
+						<h4 style="color: black">La Inversion Minima $15</h4>
+						<a target="_blank" href="https://trustinvesting.com/Klibert/unete" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="panel-body" style="background:transparent; display: none;" id="caja_auto">
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black">
+						<span style="color: white">Auto Faucet TRX<span>
+					</div>
+					<div class="panel-heading">
+						<h4 style="color: black">Gana TRX automaticamente cada 10 min a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+						<a target="_blank" href="https://forthtrade.com/tronminer?r=TFH8v6GijmgNTodEu8Am3vYVqtkGMn2ZEc" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-success" >
+					<div class="panel-heading" style="background: black">
+						<span style="color: white">Auto Faucet CryptoMonedas<span>
+					</div>
+					<div class="panel-heading">
+						<h4 style="color: black">Gana CRYPTOMONEDAS automaticamente a <a target="_blank" href="https://faucetpay.io/?r=777324">Faucetpay</a></h4>
+						<a target="_blank" href="
+							https://autofaucet.dutchycorp.space/?r=yoursetneo" class="btn btn-primary">Registrate</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+	<script type="text/javascript">
+	$("#faucet").click(function(){
+
+			document.getElementById("caja_faucet").style.display="block"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+
+
+		})
+		$("#ptc").click(function(){
+
+			document.getElementById("faucet_5").style.display="block"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+
+		})
+		$("#mineria").click(function(){
+
+			document.getElementById("caja_mineria").style.display="block"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+
+		})
+		$("#billetera").click(function(){
+
+
+			document.getElementById("caja_billeteras").style.display="block"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+
+		})
+		$("#inv").click(function(){
+
+			document.getElementById("caja_inv").style.display="block"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+			
+
+		})
+
+		$("#faucet_60").click(function(){
+
+			document.getElementById("caja_faucet_60").style.display="block"
+
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+			
+
+		})
+
+		$("#farm").click(function(){
+
+			document.getElementById("caja_farming").style.display="block"
+
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			document.getElementById("caja_auto").style.display="none"
+
+		})
+	
+		$("#auto").click(function(){
+
+
+			document.getElementById("caja_auto").style.display="block"
+
+
+			document.getElementById("caja_farming").style.display="none"
+			document.getElementById("caja_inv").style.display="none"
+			document.getElementById("caja_billeteras").style.display="none"
+			document.getElementById("caja_mineria").style.display="none"
+			document.getElementById("caja_faucet").style.display="none"
+			document.getElementById("faucet_5").style.display="none"
+			document.getElementById("caja_faucet_60").style.display="none"
+			
+
+		})
+	
+</script>
+</body>
